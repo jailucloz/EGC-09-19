@@ -17,6 +17,7 @@ WORKDIR /app/decide
 
 # local settings.py
 ADD docker-settings.py /app/decide/local_settings.py
+RUN chmod +x manage.py
 
 RUN ./manage.py collectstatic
 
